@@ -50,7 +50,7 @@ ndvi <- read_csv(ndvi_csv_path)
 
 ndvi <- ndvi %>%
   mutate(date = as.Date(date)) %>%
-  select(date, ndvi_sg)
+  select(date, ndvi_sg_scaled)
 
 # -----------------------------
 # 5. NASA POWER API URL
@@ -162,7 +162,7 @@ cat("Final CSV saved at:\n", output_csv, "\n")
 # -----------------------------
 # 11. Quick Sanity Plot
 # -----------------------------
-plot(final_df$date, final_df$ndvi_sg,
+plot(final_df$date, final_df$ndvi_sg_scaled,
      type = "l", col = "darkgreen",
      xlab = "Date", ylab = "NDVI (SG)",
      main = "NDVI Phenology (5-Day)")
