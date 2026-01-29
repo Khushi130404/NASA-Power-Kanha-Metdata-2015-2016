@@ -36,7 +36,7 @@ df <- df %>%
 # -----------------------------
 # 4. Columns to Plot
 # -----------------------------
-ndvi_col <- "ndvi_sg"
+ndvi_col <- "ndvi_sg_scaled"
 
 met_cols <- c("T2M", "PPT", "RAD", "RH")
 
